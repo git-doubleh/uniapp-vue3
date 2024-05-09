@@ -1,7 +1,7 @@
 <!--
  * @Description: 
  * @Date: 2024-05-09 09:03:23
- * @LastEditTime: 2024-05-09 14:10:40
+ * @LastEditTime: 2024-05-09 15:44:53
 -->
 <template>
   <view class="content">
@@ -10,6 +10,10 @@
       <text class="title">{{ title }}</text>
       <text class="title">{{ counter.count }}</text>
     </view>
+    <button @click="handleTest">测试</button>
+    <input class="weui-input" auto-focus placeholder="将会获取焦点"/>
+    <button @click="handleNavi">跳转</button>
+    <i class="iconfont icontiaobo"></i>
   </view>
 </template>
 
@@ -23,7 +27,17 @@ const counter = useCounterStore()
 const title = ref('Hello world')
 
 const handleTest = () => {
+  uni.showToast({
+    title: 'error',
+    icon: 'none'
+  })
   getTest()
+}
+
+const handleNavi = () => {
+  uni.navigateTo({
+    url: '/pages/test/index'
+  })
 }
 </script>
 

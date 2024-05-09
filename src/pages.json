@@ -11,6 +11,13 @@
       "style": {
         "navigationBarTitleText": "logs"
       }
+    },
+    {
+      "path": "pages/test/index",
+      "style": {
+        "navigationBarTitleText": "test",
+        "enablePullDownRefresh": true
+      }
     }
   ],
   "tabBar": {
